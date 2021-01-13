@@ -58,7 +58,7 @@ except ValueError:
     sys.exit(1)
 
 
-start_message = os.environ.get("TG_START_MESG", "🙋 Hey Bruh!! \nI am **Instant Telegram File to Link Generator Bot**.\n\nSend me any file & see the magic!")
-group_chat_message = os.environ.get("TG_G_C_MESG", "Sorry. But, I only work in private.")
+start_message = os.environ.get("TG_START_MESG", "Hello Bruh!! \nI Am An **Instant Telegram File to Link Generator Bot**.\n\nSend Me Any File From Telegram & See The Magic! 🎯")
+group_chat_message = os.environ.get("TG_G_C_MESG", "Sorry. But, I Only Work In Private.")
 
 tg_bot_token = os.environ.get("TG_BOT_FATHER_TOKEN", None)
