@@ -27,16 +27,16 @@ async def handle_message(evt: events.NewMessage.Event) -> None:
         await evt.reply(group_chat_message)
         return
     if not evt.file:
-        channel_link = "https://t.me/Discovery_Updates"
-        group_link = "https://t.me/linux_repo"
-        dev_link = "https://t.me/AbirHasan2005"
+        channel_link = "https://t.me/FlixBots"
+        group_link = "https://t.me/FlixHelpBot"
+        dev_link = "https://t.me/Iggie"
         keyboard = [
             [  
-                Button.url("Updates Channel", channel_link), 
-                Button.url("Support Group", group_link)
+                Button.url("Updates Channel 📢", channel_link), 
+                Button.url("Support Bot 👤", group_link)
             ],
             [
-                Button.url("Developer", dev_link)
+                Button.url("Developer 🧕", dev_link)
             ]
         ]
         await evt.reply(start_message,buttons=keyboard,parse_mode='md')
@@ -47,9 +47,9 @@ async def handle_message(evt: events.NewMessage.Event) -> None:
             Button.url("Download Now", f"{url}")
         ],
         [
-            Button.url("Join Bots Updates Channel", "https://t.me/Discovery_Updates")
+            Button.url("Join Bots Updates Channel", "https://t.me/FlixBots")
         ]
     ]
-    await evt.reply(f"Bruh!\nYour Link Generated.\n\nFile Name: `{get_file_name(evt)}`\n\nDownload Link: `{url}`\n\n__(Tap to Copy!)__",buttons=url_button,parse_mode="md")
+    await evt.reply(f"**Link Generated Successfully!!.\n\nFile Name :** `{get_file_name(evt)}`\n\n**Download Link :** `{url}`\n\n__(Tap to Copy!)__",buttons=url_button,parse_mode="md")
     log.info(f"Replied with link for {evt.id} to {evt.from_id} in {evt.chat_id}")
     log.debug(f"Link to {evt.id} in {evt.chat_id}: {url}")
