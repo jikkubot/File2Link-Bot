@@ -27,9 +27,9 @@ async def handle_message(evt: events.NewMessage.Event) -> None:
         await evt.reply(group_chat_message)
         return
     if not evt.file:
-        channel_link = "https://t.me/FlixBots"
-        group_link = "https://t.me/FlixHelpBot"
-        dev_link = "https://t.me/Iggie"
+        channel_link = "https://t.me/Filmclubchannel"
+        group_link = "https://t.me/Filmclubgroup"
+        dev_link = "https://t.me/Mallubhai"
         keyboard = [
             [  
                 Button.url("Updates Channel 📢", channel_link), 
@@ -47,7 +47,7 @@ async def handle_message(evt: events.NewMessage.Event) -> None:
             Button.url("Download Now", f"{url}")
         ],
         [
-            Button.url("Join Bots Updates Channel", "https://t.me/FlixBots")
+            Button.url("Join Bots Updates Channel", "https://t.me/Filmclubchannel")
         ]
     ]
     await evt.reply(f"**Link Generated Successfully!!.\n\nFile Name :** `{get_file_name(evt)}`\n\n**Download Link :** `{url}`\n\n__(Tap to Copy!)__",buttons=url_button,parse_mode="md")
